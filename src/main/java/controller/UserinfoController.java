@@ -120,7 +120,7 @@ public class UserinfoController {
 
     @RequestMapping("/admin")
     public String admin(@RequestParam String username, @RequestParam String password){
-
+        System.out.println("测试代码更新");
         Admininfo ad=asi.selectByUsername(username);
         String md5Pwd= DigestUtils.md5Hex(password.getBytes());
         if(ad!=null) {
